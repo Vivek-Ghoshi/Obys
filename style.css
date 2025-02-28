@@ -1,0 +1,103 @@
+@font-face {
+    font-family: silkSerif;
+    src: url(./silkserif-regularitalic-webfont.woff);
+}
+@font-face {
+    font-family: plainLight;
+    src: url(./plain-light-webfont.woff);
+}
+*{
+     margin : 0;
+     padding: 0;
+     box-sizing: border-box;
+     color: white;
+}
+
+     html,body{
+     height:100%;
+     width: 100%;
+}
+.loader{
+    width: 100%;
+    height: 100vh;
+    background-color: #030303;
+    position: fixed;
+    z-index: 999;
+    padding: 8vw 7vw;
+}
+.loader .line{
+    width: 100%;
+    height: 7.4vw;
+    /* background-color: red; */
+    overflow: hidden;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+}
+.loader .line h1{
+    font-size: 7.2vw;
+    font-weight: 600;
+    font-family: 'plainLight';
+    line-height: 6vw;
+}
+.loader #line1, .loader #line3{
+  display: flex;
+  align-items: center;
+  gap: 2.5vw;
+}
+.loader #line1 h2{
+    font-size: 5vw;
+    font-family: 'silkSerif';
+    font-weight: 400;
+}
+.loader #line1 h2 span{
+    display: inline-block;
+    width: 9vw;
+    text-align: right;
+}
+.loader #line3 h2{
+    font-family: plainLight;
+    font-size: 6vw;
+    font-weight: 600;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+@keyframes Now{
+    0%{
+        font-family: 'plainLight';
+        -webkit-text-stroke: 2px white;
+        color: white;
+        opacity: 1;
+    }
+    47%{
+        font-family: 'plainLight';
+        -webkit-text-stroke: 1px white;
+         color: transparent;
+         font-weight: 500;
+         opacity: 0;
+    }
+    51%{
+        font-family: 'silkSerif';
+        -webkit-text-stroke: 1px white;
+         color: white;
+         font-weight: 500;
+         opacity: 1;
+    }
+    100%{
+        font-family: 'silkSerif';
+        -webkit-text-stroke: 1px white;
+        color: transparent;
+        font-weight: 500;
+        opacity: 0;
+        
+    }
+}
+#main{
+    position: relative;
+    background-color: #030303;
+}
+.page1{
+    width: 100%;
+    height: 100vh;
+    background-color: #090909;
+}
